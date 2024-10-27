@@ -31,19 +31,7 @@ public class Persona {
         return dateOfBirth;
     }
 
-    /*public void setName(String name) {
-        this.name = name;
+    public String printPersonaData() {
+        return "Name: " + this.name + " " + this.surname + ";\nDate of birth: " + this.dateOfBirth + ";\nNumder of ID: " + this.ID + ".";
     }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void setID(String iD) {
-        ID = iD;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }*/
 }

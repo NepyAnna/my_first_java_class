@@ -14,11 +14,10 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        Persona newPersona = new Persona("Anna", "Sun", "AD 2345678", LocalDate.of(1984, 8, 24));
+        Persona newPersona = new Persona("Lana", "Sun", "AB 123456 ", LocalDate.of(1994, 4, 4));
 
-        System.out.println(newPersona.dateOfBirth);
-        System.out.println(newPersona.name);
-        System.out.println(newPersona.surname);
+        System.out.println(newPersona.printPersonaData());
+
 
     }
 }

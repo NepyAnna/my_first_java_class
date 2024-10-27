@@ -11,8 +11,8 @@ public class PersonaTest {
     void testConstructorNameSurnameIdDate() {
         String name = "Anna";
         String surname = "Nepyivoda";
-        String id = "AA 376192";
-        LocalDate dateOfBirth = LocalDate.of(1984, 8, 24);
+        String id = "AA 123456";
+        LocalDate dateOfBirth = LocalDate.of(2004, 12, 24);
         
         Persona newPersona = new Persona(name,  surname,  id, dateOfBirth);
         
@@ -21,4 +21,14 @@ public class PersonaTest {
         assertEquals(id, newPersona.getID());
         assertEquals(dateOfBirth, newPersona.getDateOfBirth());
     }
+
+    @Test
+    void testPrintPersonaData() {
+        Persona persona = new Persona("Anna", "Nepyivoda", "AA 123456", LocalDate.of(2004, 12, 24));
+        
+        String expectedOutput = "Name: Anna Nepyivoda;\nDate of birth: 2004-12-24;\nNumder of ID: AA 123456.";
+        assertEquals(expectedOutput, persona.printPersonaData());
+    }
+   
+
 }
