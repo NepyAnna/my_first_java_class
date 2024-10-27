@@ -31,7 +31,7 @@ public class Persona {
         return dateOfBirth;
     }
 
-    public String printPersonaData() {
-        return "Name: " + this.name + " " + this.surname + ";\nDate of birth: " + this.dateOfBirth + ";\nNumder of ID: " + this.ID + ".";
+    void printPersonaData() {
+        System.out.println("Name: " + this.name + " " +this.surname + ";\nDate of birth: " + this.dateOfBirth + ";\nNumber of ID: " + this.ID + ".");
     }
 }
