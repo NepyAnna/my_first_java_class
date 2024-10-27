@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 public class PersonaTest {
     @Test
     void testConstructorNameSurnameIdDate() {
-        String name = "Anna";
-        String surname = "Nepyivoda";
+        String name = "Hanna";
+        String surname = "Sun";
         String id = "AA 123456";
         LocalDate dateOfBirth = LocalDate.of(2004, 12, 24);
         
@@ -26,8 +26,8 @@ public class PersonaTest {
 
     @Test
     void testPrintPersonaData() {
-        String name = "Anna";
-        String surname = "Nepyivoda";
+        String name = "Hanna";
+        String surname = "Sun";
         String id = "AA 123456";
         LocalDate dateOfBirth = LocalDate.of(2004, 12, 24);
 
@@ -38,7 +38,7 @@ public class PersonaTest {
 
         newPersona.printPersonaData();
 
-        String expectedOutput = "Name: " + name + " " + surname + ";\nDate of birth: " + dateOfBirth + ";\nNumber of ID: " + id + ".";
+        String expectedOutput = "Name: " + name + " " + surname + ";\nDate of birth: " + dateOfBirth + ";\nNumber of ID: " + id + ".\n";
 
         assertEquals(expectedOutput, outputStream.toString());
 
