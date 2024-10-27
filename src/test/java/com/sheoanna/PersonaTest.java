@@ -9,11 +9,16 @@ import org.junit.jupiter.api.Test;
 public class PersonaTest {
     @Test
     void testConstructorNameSurnameIdDate() {
-
-        Persona newPersona = new Persona("Anna",  "Nepyivoda",  "AA 376192", LocalDate.of(1984, 8, 24));
+        String name = "Anna";
+        String surname = "Nepyivoda";
+        String id = "AA 376192";
+        LocalDate dateOfBirth = LocalDate.of(1984, 8, 24);
         
-        assertEquals("Anna", newPersona.name);
-        assertEquals(LocalDate.of(1984, 8, 24), newPersona.dateOfBirth);
-        assertEquals("Nepyivoda", newPersona.surname);
+        Persona newPersona = new Persona(name,  surname,  id, dateOfBirth);
+        
+        assertEquals(name, newPersona.getName());
+        assertEquals(surname, newPersona.getSurname());
+        assertEquals(id, newPersona.getID());
+        assertEquals(dateOfBirth, newPersona.getDateOfBirth());
     }
 }
