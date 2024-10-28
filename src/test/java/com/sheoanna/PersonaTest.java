@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class PersonaTest {
     @Test
-    void testConstructorNameSurnameIdDate() {
+    void testConstructor() {
         String name = "Hanna";
         String surname = "Sun";
         String id = "AA 123456";
