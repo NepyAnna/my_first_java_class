@@ -25,7 +25,7 @@ public class PersonaTest {
         assertEquals(id, newPersona.getID());
         assertEquals(dateOfBirth, newPersona.getDateOfBirth());
         assertEquals(country, newPersona.getCountryOfBirth());
-        assertEquals(personGender, newPersona.getGender());
+        assertEquals("Female", newPersona.getGender());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class PersonaTest {
 
         newPersona.printPersonaData();
 
-        String expectedOutput = "Name: " + name + " " + surname + ";\nDate of birth: " + dateOfBirth + ";\nNumber of ID: " + id + ".\n";
+        String expectedOutput = "Name: " + name + " " + surname + ";\nDate of birth: " + dateOfBirth + ";\nNumber of ID: " + id + ";\nCountry of Birth: " + country + ";\nGender: " + newPersona.getGender() + ".\n";
 
         assertEquals(expectedOutput, outputStream.toString());
 
