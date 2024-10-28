@@ -15,13 +15,17 @@ public class PersonaTest {
         String surname = "Sun";
         String id = "AA 123456";
         LocalDate dateOfBirth = LocalDate.of(2004, 12, 24);
+        String country = "Spain";
+        Gender personGender = Gender.M;
         
-        Persona newPersona = new Persona(name,  surname,  id, dateOfBirth);
+        Persona newPersona = new Persona(name, surname, id, dateOfBirth, country, personGender);
         
         assertEquals(name, newPersona.getName());
         assertEquals(surname, newPersona.getSurname());
         assertEquals(id, newPersona.getID());
         assertEquals(dateOfBirth, newPersona.getDateOfBirth());
+        assertEquals(country, newPersona.getCountryOfBirth());
+        assertEquals(personGender, newPersona.getGender());
     }
 
     @Test
@@ -30,8 +34,10 @@ public class PersonaTest {
         String surname = "Sun";
         String id = "AA 123456";
         LocalDate dateOfBirth = LocalDate.of(2004, 12, 24);
+        String country = "Spain";
+        Gender  personGender = Gender.M;
 
-        Persona newPersona = new Persona(name,  surname,  id, dateOfBirth);
+        Persona newPersona = new Persona(name,  surname,  id, dateOfBirth, country, personGender);
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
@@ -44,5 +50,4 @@ public class PersonaTest {
 
         System.setOut(System.out);
     }
-
 }
