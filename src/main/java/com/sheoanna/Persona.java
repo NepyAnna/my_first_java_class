@@ -13,7 +13,6 @@ public class Persona {
     private String surname;
     private String ID;
     private LocalDate dateOfBirth;
-
     private String countryOfBirth;
     private Gender personGender;
 
@@ -56,6 +55,10 @@ public class Persona {
     }
 
     void printPersonaData() {
-        System.out.println("Name: " + this.name + " " +this.surname + ";\nDate of birth: " + this.dateOfBirth + ";\nNumber of ID: " + this.ID + ";\nCountry of Birth: " + this.countryOfBirth + ";\nGender: " + this.getGender() + ".");
+        System.out.println("Name: " + this.name + " " +this.surname
+        + ";\nDate of birth: " + this.dateOfBirth
+        + ";\nNumber of ID: " + this.ID
+        + ";\nCountry of Birth: " + this.countryOfBirth
+        + ";\nGender: " + this.getGender() + ".");
     }
 }

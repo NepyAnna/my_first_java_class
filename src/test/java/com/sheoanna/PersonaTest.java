@@ -44,10 +44,23 @@ public class PersonaTest {
 
         newPersona.printPersonaData();
 
-        String expectedOutput = "Name: " + name + " " + surname + ";\nDate of birth: " + dateOfBirth + ";\nNumber of ID: " + id + ";\nCountry of Birth: " + country + ";\nGender: " + newPersona.getGender() + ".\n";
+        String expectedOutput = "Name: " + name + " " + surname
+        + ";\nDate of birth: " + dateOfBirth
+        + ";\nNumber of ID: " + id
+        + ";\nCountry of Birth: " + country
+        + ";\nGender: " + newPersona.getGender() + ".\n";
 
         assertEquals(expectedOutput, outputStream.toString());
 
         System.setOut(System.out);
+    }
+
+    @Test
+    void testGetGender() {
+        Persona personaWoman = new Persona("Lana", "Sun", "AB 123456", LocalDate.of(2004, 4, 4), "Spain", Gender.O);
+        Persona personaMan = new Persona("Andrew", "Moon", "BB 123456", LocalDate.of(2012, 12, 12), "France", Gender.H);
+       
+        assertEquals("Others", personaWoman.getGender());
+        assertEquals("Male", personaMan.getGender());
     }
 }
