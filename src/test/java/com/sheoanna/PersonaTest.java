@@ -39,6 +39,7 @@ public class PersonaTest {
 
         Persona newPersona = new Persona(name,  surname,  id, dateOfBirth, country, personGender);
 
+        PrintStream originalOut = System.out;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStream));
 
@@ -52,7 +53,7 @@ public class PersonaTest {
 
         assertEquals(expectedOutput, outputStream.toString());
 
-        System.setOut(System.out);
+        System.setOut(originalOut);
     }
 
     @Test
